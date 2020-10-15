@@ -29,6 +29,7 @@
 .hamburger {
     width: 32px;
     padding: 0 4px 8px 4px;
+    margin-left: auto;
 }
 
 .hamburger span {
@@ -46,4 +47,35 @@
 
 #menu:target {
     display: block;
+}
+
+.menu ul {
+    list-style-type: none;
+    background-color: orange;
+    padding: 0;
+    position: fixed;
+    top: -10px;
+    left: 0;
+    width: 100%;
+}
+
+.menu ul li {
+    text-align: center;
+    border-top: 1px solid white;
+}
+
+.menu ul li:first-child {
+    text-align: right;
+}
+
+.menu ul li:first-child a {
+    display: inline-block;
+    margin-left: auto;
+}
+
+.menu ul a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1em;
 }
