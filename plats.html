@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes plats</title>
+    <link rel="stylesheet" href="style2.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="entrees.html">Les entrées</a></li>
+                <li><a href="plats.html">Les plats</a></li>
+                <li><a href="desserts.html">Les desserts</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <h1>Les plats</h1>
+
+    <ul class="arianne text-grey">
+        <li>Accueil</li>
+        <li>Plats</li>
+        <li>Lasagnes</li>
+    </ul>
+
+    <h2 class="text-blue">Les lasagnes à la bolognaise</h2>
+    
+    <ul>
+        <li>Plat principal</li>
+    </ul>
+
+    <div id="presentation">
+        <div class="cadre"><img src="img/lasagnes.jpg" alt="Illustration plat de lasagnes"></div>
+
+        <table>
+            <tr>
+                <th>Temps de préparation</th>
+                <th>Personnes</th>
+                <th>Difficulté</th>
+                <th>Coût</th>
+            </tr>
+            <tr>
+                <td class="text-orange">2h05</td>
+                <td class="text-orange">6</td>
+                <td class="level level1"><span class="bg-orange">1</span><span class="bg-orange">2</span><span class="bg-orange">3</span><span>4</span></td>
+                <td class="level level2"><span>1</span><span>2</span><span>3</span></td>
+            </tr>
+        </table>
+
+        <p><a href="">Je sauvegarde</a><a href="">Je partage avec mes amis</a></p>
+    </div>
+    
+    <div>
+        <div>
+            <h3 class="text-orange">Ingrédients</h3>
+            <ul id="ingredients">
+                <li><div><img class="miniature" src="img/paquet_lasagnes.jpg" alt=""></div> 1 paquet de pâtes de lasagnes</li>
+                <li><div><img class="miniature" src="img/oignons.jpg" alt=""></div> 3 oignons jaunes</li>
+                <li><div><img class="miniature" src="img/ail.jpg" alt=""></div> 3 gousses d’ail</li>
+                <li><div><img class="miniature" src="img/celeri.jpg" alt=""></div> 1 branche de céleri</li>
+                <li><div><img class="miniature" src="img/carottes.jpg" alt=""></div> 1 carotte</li>
+                <li>600g de viande de bœuf hachée</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 class="text-orange">Etapes</h3>
+            <ol>
+                <li>Faire revenir gousses hachées d'ail et les oignons émincés dans un peu d'huile d'olive.</li>
+                <li>Ajouter la carotte et la branche de céleri hachée puis la viande et faire revenir le tout</li>
+                <li>Au bout de quelques minutes, ajouter le vin rouge. Laisser cuire jusqu'à évaporation</li>
+                <li>Faire revenir gousses hachées d'ail et les oignons émincés dans un peu d'huile d'olive.</li>
+                <li>Ajouter la carotte et la branche de céleri hachée puis la viande et faire revenir le tout</li>
+                <li>Au bout de quelques minutes, ajouter le vin rouge. Laisser cuire jusqu'à évaporation</li>
+                <li>Faire revenir gousses hachées d'ail et les oignons émincés dans un peu d'huile d'olive.</li>
+                <li>Ajouter la carotte et la branche de céleri hachée puis la viande et faire revenir le tout</li>
+                <li>Au bout de quelques minutes, ajouter le vin rouge. Laisser cuire jusqu'à évaporation</li>
+                <li>Faire revenir gousses hachées d'ail et les oignons émincés dans un peu d'huile d'olive.</li>
+                <li>Ajouter la carotte et la branche de céleri hachée puis la viande et faire revenir le tout</li>
+                <li>Au bout de quelques minutes, ajouter le vin rouge. Laisser cuire jusqu'à évaporation</li>
+            </ol>
+        </div>
+    </div>
+
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>Coordonnées personnelles</legend>
+            <p>
+                <label for="pseudo">Votre pseudo </label>
+                <input type="text" id="pseudo" name="pseudo">
+            </p>
+            <p>
+                <label for="email">Votre email </label>
+                <input type="email" id="email" name="email">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Laissez votre avis</legend>
+            
+            <p>
+                <label for="message">Votre message </label>
+                <textarea id="message" name="message"></textarea>
+            </p>
+            <p>
+                <label for="note1">Votre note </label>
+                <select id="note1" name="note1">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </p>
+            <p>
+                Choisissez une note : 
+                <label for="not0">0</label>
+                <input type="radio" value="0" id="not0" name="note2">
+                <label for="not1">1</label>
+                <input type="radio" value="1" id="not1" name="note2">
+                <label for="not2">2</label>
+                <input type="radio" value="2" id="not2" name="note2">
+                <label for="not3">3</label>
+                <input type="radio" value="3" id="not3" name="note2">
+                <label for="not4">4</label>
+                <input type="radio" value="4" id="not4" name="note2">
+            </p>
+
+            <p>
+                <input type="hidden" name="sujet">
+            </p>
+            
+            <input type="submit" value="Envoyer mon avis">
+
+        </fieldset>
+
+        <!-- &#9733; pour ★ -->
+        <!-- &#9734; pour ☆ -->
+        <!-- https://outils-javascript.aliasdmc.fr/encodage-caracteres-meteo-ciel/encode-caractere-2606-html-css-js-autre.html -->
+        <p class="rating">
+            <input class="radio" type="radio" value="5" id="not10" name="note3">
+            <label for="not10">&#9734;</label>
+            <input class="radio" type="radio" value="4" id="not11" name="note3">
+            <label for="not11">&#9734;</label>
+            <input class="radio" type="radio" value="3" id="not12" name="note3">
+            <label for="not12">&#9734;</label>
+            <input class="radio" type="radio" value="2" id="not13" name="note3">
+            <label for="not13">&#9734;</label>
+            <input class="radio" type="radio" value="1" id="not14" name="note3">
+            <label for="not14">&#9734;</label>
+        </p>
+
+    </form>
+
+    <div class="sep"></div>
+    <script src="script.js"></script>
+</body>
+</html>
