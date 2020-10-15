@@ -1,0 +1,195 @@
+/* Règles générales : s'appliquent à toute la page ou définissent des classes "génériques" applicables à toute la page */
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(97, 94, 93);
+}
+
+body {
+    width: 80%;
+    margin: auto;
+}
+
+/* Permet d'inverser le flux naturel des éléments */
+/* Par défaut: flex-direction: row; flex-wrap: no-wrap; */
+.row {
+    display: flex;
+}
+
+/* Définition de notre "grille" à travers la définition des tailles de ses "colonnes" */
+.col-1 { width: 8.33%;}
+.col-2 { width: 16.66%;}
+.col-3 { width: 25%;}
+.col-4 { width: 33.33%;}
+.col-5 { width: 41.66%;}
+.col-6 { width: 50%;}
+.col-7 { width: 58.33%;}
+.col-8 { width: 66.66%;}
+.col-9 { width: 75%;}
+.col-10 { width: 83.33%;}
+.col-11 { width: 91.66%;}
+.col-12 { width: 100%;}
+
+/* Header : Règles relatives aux éléments de la section "header" de la page */
+
+/* Zone de recherche */
+.header h1 {
+    align-self: center;
+}
+
+.header p {
+    margin-left: auto;
+    margin-right: 1em;
+}
+
+.header p input {
+    width: calc(100% - 2em);
+    padding: 1em;
+    border: 1px solid rgb(97, 94, 93);
+    border-radius: 50px;
+}
+
+.header p input:focus {
+    border: 2px solid orange;
+}
+
+/* Menu - Navigation : Règles relatives au menu de navigation principal */
+
+.menu {
+    list-style-type: none;
+}
+
+.menu li {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu li a {
+    display: block;
+    padding: 0.75em;
+    text-align: center;
+    text-decoration: none;
+    background-color: orange;
+    color: white;
+    font-size: 1.5em;
+}
+
+.menu li a:hover {
+    background-color: rgb(247, 215, 157);
+    color: orange;
+}
+
+/* Article - Images : Règles relatives à l'affichage des divers articles */
+
+#article1, #article2 {
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+.article-1 .cadre, .article-2 .cadre {
+    width: 19.6vw;
+    height: calc(18vw * 2/3);
+    overflow: hidden;
+}
+
+.article-2 .infos {
+    padding: 0 1em;
+    position: relative;
+    width: 18vw;
+    height: calc(18vw * 2/3);
+    overflow: hidden;
+}
+
+.article-1 img, .article-2 img {
+    width: 100%;
+}
+
+
+.plus {
+    width: calc(100% - 2em);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1em;
+    position: absolute;
+    top: calc((18vw * 2/3) - 3em);
+    right: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.plus a {
+    color: grey;
+    text-decoration: none;
+}
+
+.article-2 .close {
+    display: none;
+}
+
+#article1:target, #article2:target {
+    border: 2px solid orange;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 3em;
+    position: fixed;
+    top: 15vh;
+    left: calc(20vw - 3em);
+    width: 60vw;
+    height: 60vh;
+    overflow-y: scroll;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+#article1:target .plus, #article2:target .plus {
+    display: none;
+}
+
+#article1:target .close, #article2:target .close {
+    display: block;
+    background-color: orange;
+    position: fixed;
+    right: 15vw;
+    top: 15vh;
+    border-radius: 5px;
+}
+
+#article1:target .close a, #article2:target .close a {
+    display: block;
+    font-size: 2em;
+    padding: 0.5em;
+    text-decoration: none;
+    color: white;
+}
+
+#article1:target .infos, 
+#article2:target .infos, 
+#article1:target .cadre, 
+#article2:target .cadre {
+    width: 38vw;
+}
+
+#article1:target .infos, 
+#article2:target .infos {
+    overflow: visible;
+}
+
+#article1:target .cadre, 
+#article2:target .cadre {
+    height: calc(34vw * 2/3);
+}
+
+.sep {
+    height: 30vh;
+}
+
+
+
+
+.listetest {
+    list-style-type: none;
+}
+
+.listetest li:after {
+    content: " ";
+    display: inline-block;
+    margin-left: 20px;
+    border: 10px solid rgba(0, 0, 0, 0);
+    border-left: 10px solid yellow;
+}
