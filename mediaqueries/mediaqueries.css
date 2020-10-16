@@ -1,0 +1,56 @@
+/* Le sélecteur body sélectionne l'élément HTML <body>, qui correspond à l'ensemble de la fenêtre du navigateur */
+body {
+    /* La propriété CSS background-color permet de définir une couleur d'arrière plan (pour un élément de type "block" ou "inline-block") */
+    background-color: rgb(160, 160, 243);
+}
+
+/* Le sélecteur ul sélectionne TOUS les éléments HTML <ul> (listes non-ordonnées) */
+ul {
+    /* La propriété CSS list-style-type permet de gérer l'aspect visuel des puces (points) de la liste */
+    list-style-type: none;
+    /* La propriété CSS padding permet de définir une marge interne (pour un élément de type "block" ou "inline-block") */
+    padding: 0;
+}
+
+/* Le sélecteur ul li sélectionne TOUS les éléments HTML <li> (list-items) qui appartiennent à un élément HTML <ul> (unordered-list) */
+ul li {
+    /* La propriété CSS border permet de définir une bordure avec 3 arguments (l'épaisseur, le style de bordure, la couleur de la bordure) */
+    border: 2px solid darkgrey;
+    /* (marge interne des éléments de liste) */
+    padding: 1em;
+}
+
+/* Le directive @media permet de cibler un périphérique précis */
+/* Ici: Tous les support ayant une largeur minimale de 720px */
+@media all and (min-width: 720px) {
+    /* Si le support satisfait la condition énoncée, l'ensemble des règles lui sont appliquées */
+    
+    /* On peut par exemple redéfinir la couleur d'arrière plan de la page */
+    body {
+        background-color: rgb(89, 133, 89);
+    }
+}
+
+/* Ici: Tous les support ayant une largeur minimale de 1024px */
+@media all and (min-width: 1024px) {
+
+    /* Ici encore on rechange la couleur d'arrière plan */
+    body {
+        background-color: rgb(240, 163, 163);
+    }
+
+    /* Ou bien on réorganise l'affichage du menu */
+    ul {
+        /* La propriété CSS display permet de gérer l'affichage de l'élément */
+        /* Ici: display: flex permet d'utiliser flexbox, et à pour effet immédiat d'inverser le placement "naturel" des éléments enfants (ici ce sera nos li) */
+        display: flex;
+    }
+
+    /* On peut donc également modifier la taille de nos éléments de liste */
+    ul li {
+        /* La propriété CSS width permet de définir la largeur d'un élément (pour un élément de type "block" ou "inline-block") */
+        width: 33%;
+    }
+}
+
+
